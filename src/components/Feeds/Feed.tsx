@@ -1,4 +1,5 @@
 import React from "react";
+import './Feed.css'
 import Header from "./Header";
 import ImageContent from "./ImageContent";
 import ActionBar from "./ActionBar";

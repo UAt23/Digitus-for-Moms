@@ -1,0 +1,11 @@
+.feed {
+   display: flex;
+   flex-direction: column;
+   width: 672px;
+   height: fit-content;
+   flex-shrink: 0;
+   border-radius: 15px;
+   border: 0.3px solid #CCC;
+   background: #FFF;
+   box-shadow: -5px 5px 2.5px 0px rgba(0, 0, 0, 0.10);
+}

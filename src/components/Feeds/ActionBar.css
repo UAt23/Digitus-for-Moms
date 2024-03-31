@@ -1,0 +1,17 @@
+.actionBarWrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 23px;
+}
+
+.leftWrapper {
+   display: flex;
+   gap: 16px;
+}
+
+.shareIcon {
+   width: 46.667px;
+   height: 30px;
+   flex-shrink: 0;
+}

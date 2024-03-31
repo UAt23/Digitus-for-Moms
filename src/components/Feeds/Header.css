@@ -1,0 +1,46 @@
+.header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+
+}
+
+.leftSideWrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px;
+
+}
+
+.userImage {
+   padding: 0.4rem;
+   border: 3px solid #A29BFE25;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+}
+
+.userInfo {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   color: #2D3436;
+   font-family: "Inter", sans-serif;
+   font-size: 18px;
+   line-height: 18px;   
+}
+
+.userName {
+   
+}
+
+.userJob {
+
+}
+
+.more {
+   padding: 0 10px;
+}

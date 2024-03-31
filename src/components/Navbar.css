@@ -1,0 +1,7 @@
+.navbarWrapper {
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: end;
+   background-color: blueviolet;
+}

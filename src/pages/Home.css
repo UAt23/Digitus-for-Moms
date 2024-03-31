@@ -1,0 +1,6 @@
+.homeWrapper {
+   display: grid;
+   grid-template-rows: 0.1fr 1.9fr; 
+   grid-template-columns: repeat(24, 1fr);
+   height: 100vh;
+}

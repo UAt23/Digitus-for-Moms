@@ -1,0 +1,9 @@
+.feedsWrapper {
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 5;
+   grid-column-end: 19;
+   background-color: #00000025;
+   width: 100%;
+   height: 100%;
+}
