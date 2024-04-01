@@ -1,9 +1,10 @@
 import React from 'react';
+import './Tags.css';
 
 const Tags: React.FC = () => {
   return (
     <div className="tags">
-      {/* Tags go here */}
+      #child  #doctor  #hospital  #fever
     </div>
   );
 };

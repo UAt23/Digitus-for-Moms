@@ -1,0 +1,43 @@
+.postComment {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+   padding: 23px;
+}
+
+.divider {
+   padding-top: 15px;
+   width: 100%;
+   border-bottom: 1px solid #CCC;
+}
+
+.commentInput {
+   width: 100%;
+   color: #2D3436;
+   font-size: 19px;
+   font-weight: 400;
+   font-family: 'Inter', sans-serif;
+   line-height: 25px;
+   letter-spacing: 0.266px;
+   border: none;
+}
+
+.commentInput:focus {
+   text-indent: 0.8rem;
+}
+
+.commentInput::placeholder {
+   color: #B2BEC3;
+}
+
+.postButton {
+   width: 60px;
+   height: 30px;
+   color: #B2BEC3;
+   background-color: transparent;
+   flex-shrink: 0;
+   border-radius: 15px;
+   border: 1.5px solid #B2BEC3;
+   cursor: pointer;
+}

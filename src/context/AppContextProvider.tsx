@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { FeedModel } from "../api/models/FeedModel";
-import { AxiosResponse } from "axios";
 import ApiLayer from "../api/ApiLayer";
 
 interface AppContextType {
-	feeds: FeedModel[];
+	feeds: FeedModel[],
+	getNextPage: any
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -22,24 +22,31 @@ export const useAppContext = () => {
 const AppContextProvider: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
+	const [currentPage, setCurrentPage] = useState(1);
+	const [pageSize] = useState(25);
 	const [feeds, setFeeds] = useState<FeedModel[]>([]);
 
-	useEffect(() => {
-		const fetchFeeds = async () => {
-			try {
-				const response = await ApiLayer.getFeed();
-				setFeeds(response.data);
-			} catch (error) {
-				console.error("Error fetching feeds:", error);
-			}
-		};
+	const fetchFeeds = async (page: number) => {
+		try {
+			const response = await ApiLayer.getFeed(page, pageSize);
+			setFeeds([...feeds, ...response.data]);
+			setCurrentPage(page);
+		} catch (error) {
+			console.error("Error fetching feeds:", error);
+		}
+	};
 
-		fetchFeeds();
+	useEffect(() => {
+		fetchFeeds(0);
 	}, []);
 
-	// Memoize the value to avoid unnecessary re-renders
+	function getNextPage() {
+		fetchFeeds(currentPage + 1);
+	}
+
 	const contextValue: AppContextType = {
 		feeds,
+		getNextPage
 	};
 	return (
 		<AppContext.Provider value={contextValue}>

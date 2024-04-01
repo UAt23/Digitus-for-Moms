@@ -1,0 +1,14 @@
+.detail {
+   display: flex;
+   flex-direction: row;
+   gap: 4px;
+   padding: 8px 23px;
+   color: #2D3436;
+   font-family: "Inter", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+}
+
+.label {
+   color: #B2BEC3;
+}
