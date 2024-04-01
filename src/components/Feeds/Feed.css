@@ -1,7 +1,7 @@
 .feed {
    display: flex;
    flex-direction: column;
-   width: 672px;
+   width: 100%;
    height: fit-content;
    flex-shrink: 0;
    border-radius: 15px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ImageContent.css'
 
 const ImageContent: React.FC = () => {
   return (
