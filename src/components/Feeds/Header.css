@@ -15,9 +15,26 @@
 
 }
 
+.imageCircle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   width: 62px;
+   height: 62px;
+   border: 3px solid #A29BFE35;
+
+}
+
+.jobbed {
+   border: none;
+   background: rgb(0, 206, 201);
+   background: linear-gradient(145deg, rgba(0, 206, 201, 1) 0%, rgba(255, 204, 0, 1) 68%, rgba(223, 230, 233, 1) 100%);
+}
+
 .userImage {
-   padding: 0.4rem;
-   border: 3px solid #A29BFE25;
+   padding: 0.2rem;
+   background-color: #fff;
    border-radius: 50%;
    width: 50px;
    height: 50px;
@@ -30,15 +47,13 @@
    color: #2D3436;
    font-family: "Inter", sans-serif;
    font-size: 18px;
-   line-height: 18px;   
+   line-height: 18px;
 }
 
-.userName {
-   
-}
+.userName {}
 
 .userJob {
-
+   color: #FDCB6E;
 }
 
 .more {

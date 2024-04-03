@@ -7,7 +7,9 @@ const Header: React.FC<{ userData: string[] }> = ({ userData }) => {
 	return (
 		<div className="header">
 			<div className="leftSideWrapper">
-				<img className="userImage" src={imageUrl} alt="" />
+				<div className={`imageCircle ${userType.length > 0 ? 'jobbed' : '' }`}>
+					<img className="userImage" src={imageUrl} alt="" />
+				</div>
 				<div className="userInfo">
 					<p className="userName">{userName}</p>
 					<p className="userJob">{userType}</p>
