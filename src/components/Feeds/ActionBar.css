@@ -1,7 +1,7 @@
 .actionBarWrapper {
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-start;
    padding: 16px 23px;
 }
 
@@ -28,4 +28,16 @@
    font-family: 'Inter', sans-serif;
    font-size: 14px;
    font-weight: 400;
+}
+
+.savedContainer {
+   position: relative;
+   width: 1.4em !important;
+}
+
+.tick {
+   position: absolute;
+   top: 0;
+   left: 12px;
+   width: 0.5em !important;
 }

@@ -35,7 +35,7 @@ const Feed: React.FC<{ feedData: any[] }> = ({ feedData }) => {
 				userData={[user_name, user_image_url + "?" + index, user_type]}
 			/>
 			<ImageContent postImage={post_image_url + "&" + index} />
-			<ActionBar actionData={[post_id, post_likes, post_shared]} />
+			<ActionBar actionData={[post_id, post_likes, post_shared, post_liked]} />
 			<Detail
 				postDetail={[
 					post_read_duration,
