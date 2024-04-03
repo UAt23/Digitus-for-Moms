@@ -12,7 +12,7 @@ const CreateFeed: React.FC = () => {
 				/>
 				<textarea
 					className="inputArea"
-					placeholder={"Write something, USER"}
+					placeholder={"Write something, Uğur Alp"}
 					name=""
 					id=""
 					cols={30}

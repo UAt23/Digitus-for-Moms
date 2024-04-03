@@ -1,0 +1,101 @@
+.familiarFace {
+   position: absolute;
+   top: 0;
+
+   display: grid;
+   grid-template-rows: repeat(12, 1fr);
+
+   width: 170px;
+   height: 90%;
+   box-sizing: border-box;
+   padding: 12px 8px;
+   border-radius: 15px;
+   border: 0.3px solid #CCC;
+   background-color: #FFF;
+   box-shadow: -5px 5px 2.5px 0px rgba(0, 0, 0, 0.10);
+   transition: all 0.2s ease;
+   opacity: 1;
+}
+
+.invisible {
+   opacity: 0;
+   z-index: -1;
+}
+
+.prevFace {
+   left: calc(0% + 1rem);
+}
+
+.activeFace {
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.nextFace {
+   right: calc(0% + 1rem);
+}
+
+.imageContainer {
+   grid-row-start: 2;
+   grid-row-end: 5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.cardImage {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+}
+
+.cardInfo {
+   grid-row-start: 7;
+   grid-row-end: 8;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.name {
+   width: 100%;
+   text-align: center;
+}
+
+.job {}
+
+.location {
+   grid-row-start: 9;
+   grid-row-end: 10;
+   color: #636E72;
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 24px;
+   text-align: center;
+}
+
+.followButton {
+   grid-row-start: 12;
+   grid-row-end: 13;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.follow {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 120px;
+   height: 30px;
+   border-radius: 18px;
+   background-color: #A29BFE;
+   color: #FFF;
+   text-align: center;
+   font-family: 'Inter', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+}
+

@@ -31,10 +31,15 @@ const Feeds: React.FC = () => {
 				>
 					<div className="scrollWrapper">
 						<CreateFeed />
-						<FamiliarFaces />
 						{feeds.length ? (
 							feeds.map((feed, index) => (
-								<Feed key={index} feedData={[index, feed]} />
+								<>
+									<Feed
+										key={index}
+										feedData={[index, feed]}
+									/>
+									{(index === 3 || index%14 === 0) ? <FamiliarFaces /> : <></>}
+								</>
 							))
 						) : (
 							<div>isLoading...</div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FamiliarFaces.css";
+import FaceCard from "./FaceCard";
 import { IconButton } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -67,17 +68,11 @@ const FamiliarFaces: React.FC = () => {
 	const [index, setIndex] = useState(1);
 
 	const slideLeft = () => {
-		if (index - 1 > 0) {
-			console.log(index);
-			setIndex(index - 1);
-		}
+		setIndex(index - 1);
 	};
 
 	const slideRight = () => {
-		if (index + 1 <= data.length - 1) {
-			console.log(index);
-			setIndex(index + 1);
-		}
+		setIndex(index + 1);
 	};
 
 	return (
@@ -89,7 +84,7 @@ const FamiliarFaces: React.FC = () => {
 			<IconButton
 				onClick={() => slideLeft()}
 				aria-label="chevron-left"
-				disabled={index <= 2}
+				disabled={index <= 1}
 				size="large"
 				className="indexButton left"
 			>
@@ -107,14 +102,14 @@ const FamiliarFaces: React.FC = () => {
 			<div className="carousel">
 				{data.map((person, n) => {
 					let position =
-						n === 2
+						n === index + 1
 							? "nextFace"
-							: n === 1
+							: n === index
 							? "activeFace"
-							: n === 0
+							: n === index - 1
 							? "prevFace"
 							: "invisible";
-					return <div key={n} className={`familiarFace ${position}`}>{person.user_location}</div>;
+					return <FaceCard key={n} cardData={[person, position, n]} />;
 				})}
 			</div>
 		</div>
