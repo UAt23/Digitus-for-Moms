@@ -1,12 +1,13 @@
 import React from 'react';
 import './Detail.css';
 
-const Detail: React.FC = () => {
+const Detail: React.FC<{postDetail: number[]}> = ({postDetail}) => {
+  const [duration, views, shared] = postDetail;
   return (
     <div className="detail">
-      <p>2 <span className='label'>Min •</span></p>
-      <p>5 <span className='label'>Views •</span></p>
-      <p>6 <span className='label'>Comments</span></p>
+      <p>{duration} <span className='label'>Min •</span></p>
+      <p>{views} <span className='label'>Views •</span></p>
+      <p>{shared} <span className='label'>Comments</span></p>
     </div>
   );
 };

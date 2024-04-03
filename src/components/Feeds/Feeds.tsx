@@ -3,13 +3,13 @@ import "./Feeds.css";
 import { lazy, Suspense } from "react";
 import { useAppContext } from "../../context/AppContextProvider";
 import InfiniteScroll from "react-infinite-scroller";
-import Home from "../../pages/Home";
+import CreateFeed from "./CreateFeed";
+import FamiliarFaces from "./FamiliarFaces";
 
 const Feed = lazy(() => import("./Feed"));
 
 const Feeds: React.FC = () => {
 	const { feeds, getNextPage } = useAppContext();
-	console.log(123);
 
 	function loadMoreFeeds() {
 		getNextPage();
@@ -17,9 +17,8 @@ const Feeds: React.FC = () => {
 
 	return (
 		<Suspense fallback={<div>isLoading...</div>}>
-			<div className="feedsWrapper">
+			<div className="feedsContainer">
 				<InfiniteScroll
-                    
 					pageStart={0}
 					loadMore={loadMoreFeeds}
 					hasMore={feeds.length < 1000}
@@ -28,13 +27,19 @@ const Feeds: React.FC = () => {
 							Loading ...
 						</div>
 					}
-                    useWindow={false}
+					useWindow={false}
 				>
-					{feeds.length ? (
-						feeds.map((feed, index) => <Feed key={index} />)
-					) : (
-						<div>isLoading...</div>
-					)}
+					<div className="scrollWrapper">
+						<CreateFeed />
+						<FamiliarFaces />
+						{feeds.length ? (
+							feeds.map((feed, index) => (
+								<Feed key={index} feedData={[index, feed]} />
+							))
+						) : (
+							<div>isLoading...</div>
+						)}
+					</div>
 				</InfiniteScroll>
 			</div>
 		</Suspense>

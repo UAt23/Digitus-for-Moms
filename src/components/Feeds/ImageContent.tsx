@@ -1,10 +1,10 @@
 import React from 'react';
 import './ImageContent.css'
 
-const ImageContent: React.FC = () => {
+const ImageContent: React.FC<{postImage: string}> = ({postImage}) => {
   return (
     <div className="imageContent">
-      <img src='https://source.unsplash.com/random/672x360?baby,mother' alt='asd'/>
+      <img src={postImage} alt='asd'/>
     </div>
   );
 };

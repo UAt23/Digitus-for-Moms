@@ -1,0 +1,57 @@
+.createWrapper {
+   height: 168px;
+   width: 90%;
+   margin-left: 18px;
+   border-radius: 15px;
+   border: 0.3px solid #CCC;
+   background: #FFF;
+   box-shadow: -5px 5px 2.5px 0px rgba(0, 0, 0, 0.10);
+   margin-bottom: 1.5rem;
+}
+
+.inputWrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   padding: 22px 10px;
+}
+
+.userBigImage {
+   padding: 0.2rem;
+   border: 3px solid #A29BFE25;
+   border-radius: 50%;
+   width: 72px;
+   height: 72px;
+}
+
+.inputArea {
+   height: 72px;
+   width: 100%;
+   background: #FAFAFA;
+   border: none;
+   font-family: "Open Sans", sans-serif;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 24px;
+   letter-spacing: 1px;
+   resize: none;
+   text-align: center;
+}
+
+.inputArea::placeholder {
+   transform: translateY(22px);
+   color: #B2BEC3;
+}
+
+.inputArea:active, .inputArea:focus {
+   color: #2D3436;
+   text-align: left;
+   border: 2px solid #B2BEC310;
+   outline: none;
+}
+
+.inputArea:focus::placeholder {
+   color: transparent;
+}

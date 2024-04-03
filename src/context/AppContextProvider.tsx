@@ -23,7 +23,7 @@ const AppContextProvider: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
 	const [currentPage, setCurrentPage] = useState(1);
-	const [pageSize] = useState(25);
+	const [pageSize] = useState(12);
 	const [feeds, setFeeds] = useState<FeedModel[]>([]);
 
 	const fetchFeeds = async (page: number) => {

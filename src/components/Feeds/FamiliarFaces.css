@@ -1,0 +1,103 @@
+.carouselWrapper {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 90%;
+   height: 388px;
+   margin-left: 18px;
+   border-radius: 31px;
+   opacity: 0.3898;
+   background: #DFE6E9;
+   box-shadow: -5px 5px 2.5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.carouselHeaderWrapper {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   width: 100%;
+   padding: 25px 0;
+}
+
+.carouselHeader {
+   grid-column-start: 4;
+   grid-column-end: 10;
+   color: #636E72;
+   text-align: center;
+   font-family: 'Inter', sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   letter-spacing: 0.9px;
+}
+
+.allButton {
+   grid-column-start: 11;
+   grid-column-end: 13;
+   color: #2D3436;
+   font-family: 'Inter', sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   text-align: center;
+   cursor: pointer;
+}
+
+.indexButton {
+   position: absolute !important;
+   top: 55%;
+   width: 30px;
+   height: 30px;
+   background-color: #FFF !important;
+   color: #B2BEC3;
+   border-radius: 50%;
+   z-index: 1;
+}
+
+.indexButton.left {
+   left: -18px;
+}
+
+.indexButton.right {
+   right: -18px;
+}
+
+
+.carousel {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.familiarFace {
+   position: absolute;
+   top: 0;
+   width: 170px;
+   height: 300px;
+   border-radius: 15px;
+   border: 0.3px solid #CCC;
+   background: #FFF;
+   box-shadow: -5px 5px 2.5px 0px rgba(0, 0, 0, 0.10);
+   transition: all 0.2s ease;
+   opacity: 1;
+}
+
+.invisible {
+   opacity: 0;
+   z-index: -1;
+}
+
+.prevFace {
+   left: calc(0% + 1rem);
+   background: red;
+}
+
+.activeFace {
+   left: 50%;
+   transform: translateX(-50%);
+   background: blue;
+}
+
+.nextFace {
+   right: calc(0% + 1rem);
+   background: purple;
+}
